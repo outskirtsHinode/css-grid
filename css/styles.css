@@ -201,25 +201,14 @@
 	border-color: transparent cyan transparent transparent;
 }
 
-/* line 4, sass/master.scss */
-.grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-	-ms-flex-line-pack: center;
-	    align-content: center;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-}
-
-/* line 15, sass/master.scss */
+/* line 5, sass/master.scss */
 html, body {
 	background-color: #ddd;
 	width: 100%;
 	height: 100%;
 }
 
-/* line 21, sass/master.scss */
+/* line 11, sass/master.scss */
 .main {
 	display: grid;
 	grid-template-rows: 2em 1fr;
@@ -228,7 +217,7 @@ html, body {
 	margin: 10px;
 }
 
-/* line 30, sass/master.scss */
+/* line 20, sass/master.scss */
 .main__column-heading {
 	grid-area: column;
 	display: -webkit-box;
@@ -243,7 +232,7 @@ html, body {
 	margin: 0 10px;
 }
 
-/* line 37, sass/master.scss */
+/* line 27, sass/master.scss */
 .main__row-heading {
 	grid-area: row;
 	display: -webkit-box;
@@ -258,7 +247,7 @@ html, body {
 	margin: 10px 0;
 }
 
-/* line 44, sass/master.scss */
+/* line 34, sass/master.scss */
 .main__column-heading-text {
 	width: 100%;
 	height: 100%;
@@ -266,7 +255,7 @@ html, body {
 	padding-bottom: 5px;
 }
 
-/* line 50, sass/master.scss */
+/* line 40, sass/master.scss */
 .main__row-heading-text {
 	width: 100%;
 	height: 100%;
@@ -277,19 +266,68 @@ html, body {
 	        writing-mode: vertical-lr;
 }
 
-/* line 57, sass/master.scss */
+/* line 47, sass/master.scss */
 .main__content {
 	grid-area: content;
 }
 
-/* line 62, sass/master.scss */
+/* line 53, sass/master.scss */
 .grid {
+	display: grid;
+	grid-template-areas: "header header header" "nav content content" "footer footer footer";
+	grid-template-columns: repeat(3, minmax(160px, 200px));
+	-ms-flex-line-pack: center;
+	    align-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	background-color: #fff;
 	margin: 10px;
 	border: 2px solid #999;
 }
 
-/* line 67, sass/master.scss */
+/* line 66, sass/master.scss */
+.grid__item--header {
+	grid-area: header;
+}
+
+/* line 69, sass/master.scss */
+.grid__item--nav {
+	grid-area: nav;
+}
+
+/* line 72, sass/master.scss */
+.grid__item--content {
+	grid-area: content;
+}
+
+/* line 74, sass/master.scss */
+.grid__item--content .item__main {
+	display: grid;
+	grid-template-areas: "heading heading" "itemA   itemB  ";
+}
+
+/* line 79, sass/master.scss */
+.grid__item--content .item__main .grid__item:nth-of-type(1) {
+	grid-area: heading;
+}
+
+/* line 82, sass/master.scss */
+.grid__item--content .item__main .grid__item:nth-of-type(2) {
+	grid-area: itemA;
+}
+
+/* line 85, sass/master.scss */
+.grid__item--content .item__main .grid__item:nth-of-type(3) {
+	grid-area: itemB;
+}
+
+/* line 90, sass/master.scss */
+.grid__item--footer {
+	grid-area: footer;
+}
+
+/* line 93, sass/master.scss */
 .grid__item {
 	display: grid;
 	grid-template-columns: 30px 1fr 30px;
@@ -298,7 +336,7 @@ html, body {
 	position: relative;
 }
 
-/* line 77, sass/master.scss */
+/* line 103, sass/master.scss */
 .item__main {
 	grid-area: main;
 	background-color: #d18a6380;
@@ -307,22 +345,22 @@ html, body {
 	font-weight: bold;
 }
 
-/* line 85, sass/master.scss */
+/* line 111, sass/master.scss */
 .item__arrow.arrow--dt {
 	grid-area: t;
 }
 
-/* line 86, sass/master.scss */
+/* line 112, sass/master.scss */
 .item__arrow.arrow--dr {
 	grid-area: r;
 }
 
-/* line 87, sass/master.scss */
+/* line 113, sass/master.scss */
 .item__arrow.arrow--db {
 	grid-area: b;
 }
 
-/* line 88, sass/master.scss */
+/* line 114, sass/master.scss */
 .item__arrow.arrow--dl {
 	grid-area: l;
 }
