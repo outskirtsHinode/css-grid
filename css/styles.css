@@ -1,4 +1,215 @@
-/* line 1, sass/master.scss */
-body {
-	background-color: blue;
+/* line 2, sass/master.scss */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	-ms-flex-line-pack: center;
+	    align-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+/* line 13, sass/master.scss */
+html, body {
+	background-color: #ddd;
+	width: 100%;
+	height: 100%;
+}
+
+/* line 19, sass/master.scss */
+.main {
+	display: grid;
+	grid-template-rows: 2em 1fr;
+	grid-template-columns: 1fr 2em;
+	grid-template-areas: "column  ..." "content row";
+	margin: 10px;
+}
+
+/* line 28, sass/master.scss */
+.main__column-heading {
+	grid-area: column;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin: 0 10px;
+}
+
+/* line 35, sass/master.scss */
+.main__row-heading {
+	grid-area: row;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin: 10px 0;
+}
+
+/* line 42, sass/master.scss */
+.main__column-heading-text {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+/* line 48, sass/master.scss */
+.main__row-heading-text {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding-left: 5px;
+	-webkit-writing-mode: vertical-lr;
+	    -ms-writing-mode: tb-lr;
+	        writing-mode: vertical-lr;
+}
+
+/* line 55, sass/master.scss */
+.main__content {
+	grid-area: content;
+}
+
+/* line 60, sass/master.scss */
+.arrow--l,
+.arrow--r,
+.arrow--lr {
+	display: inline-block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border-bottom: 2px solid #000;
+	line-height: 1em;
+}
+
+/* line 72, sass/master.scss */
+.arrow--t,
+.arrow--b,
+.arrow--tb {
+	display: inline-block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border-left: 2px solid #000;
+	line-height: 1em;
+}
+
+/* line 84, sass/master.scss */
+.arrow--l {
+	padding-left: 2em;
+	padding-right: 0.5em;
+}
+
+/* line 89, sass/master.scss */
+.arrow--r {
+	padding-left: 0.5em;
+	padding-right: 2em;
+}
+
+/* line 94, sass/master.scss */
+.arrow--lr {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+/* line 99, sass/master.scss */
+.arrow--l::before,
+.arrow--lr::before {
+	position: absolute;
+	left: -2px;
+	bottom: -2px;
+	border-left: 1.5em solid transparent;
+	border-bottom: 0.7em solid #000;
+	content: "";
+}
+
+/* line 108, sass/master.scss */
+.arrow--r::after,
+.arrow--lr::after {
+	position: absolute;
+	right: -2px;
+	bottom: -2px;
+	border-right: 1.5em solid transparent;
+	border-bottom: 0.7em solid #000;
+	content: "";
+}
+
+/* line 118, sass/master.scss */
+.arrow--b {
+	padding-bottom: 2em;
+	padding-top: 0.5em;
+}
+
+/* line 123, sass/master.scss */
+.arrow--t {
+	padding-bottom: 0.5em;
+	padding-top: 2em;
+}
+
+/* line 128, sass/master.scss */
+.arrow--tb {
+	padding-bottom: 2em;
+	padding-top: 2em;
+}
+
+/* line 133, sass/master.scss */
+.arrow--b::before,
+.arrow--tb::before {
+	position: absolute;
+	bottom: -2px;
+	left: -2px;
+	border-bottom: 1.5em solid transparent;
+	border-left: 0.7em solid #000;
+	content: "";
+}
+
+/* line 142, sass/master.scss */
+.arrow--t::after,
+.arrow--tb::after {
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	border-top: 1.5em solid transparent;
+	border-left: 0.7em solid #000;
+	content: "";
+}
+
+/* line 152, sass/master.scss */
+.grid {
+	background-color: #fff;
+	margin: 10px;
+	border: 2px solid #999;
+	padding: 20px;
+	gap: 4px;
+}
+
+/* line 159, sass/master.scss */
+.grid__item {
+	background-color: #d18a6380;
+	border: 2px solid #d18a6380;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	padding: 20px;
+	color: #333;
+	font-weight: bold;
 }
