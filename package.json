@@ -9,7 +9,7 @@
     "sass-w": "npm run watch-css & npm run watch-autoprefixer",
     "cssmin": "npm run release-css && npm run autoprefixer",
     "build-css": "node-sass --include-path scss sass/master.scss css/styles.css --output-style expanded --indent-type tab --indent-width 1 --source-comments",
-    "release-css":"node-sass --include-path scss sass/master.scss css/styles.css --output-style compressed",
+    "release-css": "node-sass --include-path scss sass/master.scss css/styles.css --output-style compressed",
     "watch-css": "nodemon -e scss -x \"npm run build-css \"",
     "autoprefixer": "postcss --use autoprefixer --no-map -o css/styles.css css/styles.css",
     "watch-autoprefixer": "nodemon -e scss -x \"npm run autoprefixer \"",
@@ -18,7 +18,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-   "node-sass": "^4.9.0",
+    "node-sass": "^4.9.0",
     "nodemon": "^1.17.4",
     "autoprefixer": "^8.4.1",
     "node-sass-import": "^2.0.1",
