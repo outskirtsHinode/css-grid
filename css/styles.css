@@ -1,4 +1,207 @@
-/* line 2, sass/master.scss */
+/* line 2, sass/_arrow.scss */
+.arrow--l,
+.arrow--r,
+.arrow--lr {
+	display: inline-block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border-bottom: 2px solid #000;
+	line-height: 1em;
+}
+
+/* line 14, sass/_arrow.scss */
+.arrow--t,
+.arrow--b,
+.arrow--tb {
+	display: inline-block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border-left: 2px solid #000;
+	line-height: 1em;
+}
+
+/* line 26, sass/_arrow.scss */
+.arrow--l {
+	padding-left: 2em;
+	padding-right: 0.5em;
+}
+
+/* line 31, sass/_arrow.scss */
+.arrow--r {
+	padding-left: 0.5em;
+	padding-right: 2em;
+}
+
+/* line 36, sass/_arrow.scss */
+.arrow--lr {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+/* line 41, sass/_arrow.scss */
+.arrow--l::before,
+.arrow--lr::before {
+	position: absolute;
+	left: -2px;
+	bottom: -2px;
+	border-left: 1.5em solid transparent;
+	border-bottom: 0.7em solid #000;
+	content: "";
+}
+
+/* line 50, sass/_arrow.scss */
+.arrow--r::after,
+.arrow--lr::after {
+	position: absolute;
+	right: -2px;
+	bottom: -2px;
+	border-right: 1.5em solid transparent;
+	border-bottom: 0.7em solid #000;
+	content: "";
+}
+
+/* line 60, sass/_arrow.scss */
+.arrow--b {
+	padding-bottom: 2em;
+	padding-top: 0.5em;
+}
+
+/* line 65, sass/_arrow.scss */
+.arrow--t {
+	padding-bottom: 0.5em;
+	padding-top: 2em;
+}
+
+/* line 70, sass/_arrow.scss */
+.arrow--tb {
+	padding-bottom: 2em;
+	padding-top: 2em;
+}
+
+/* line 75, sass/_arrow.scss */
+.arrow--b::before,
+.arrow--tb::before {
+	position: absolute;
+	bottom: -2px;
+	left: -2px;
+	border-bottom: 1.5em solid transparent;
+	border-left: 0.7em solid #000;
+	content: "";
+}
+
+/* line 84, sass/_arrow.scss */
+.arrow--t::after,
+.arrow--tb::after {
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	border-top: 1.5em solid transparent;
+	border-left: 0.7em solid #000;
+	content: "";
+}
+
+/* line 94, sass/_arrow.scss */
+.arrow--dt,
+.arrow--dr,
+.arrow--db,
+.arrow--dl {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+/* line 103, sass/_arrow.scss */
+.arrow--dt::before, .arrow--dt::after,
+.arrow--dr::before,
+.arrow--dr::after,
+.arrow--db::before,
+.arrow--db::after,
+.arrow--dl::before,
+.arrow--dl::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	bottom: 2px;
+	left: 2px;
+	width: 0;
+	height: 0;
+	margin: auto;
+}
+
+/* line 118, sass/_arrow.scss */
+.arrow--dt::before {
+	bottom: auto;
+	border-style: solid;
+	border-width: 0 4px 10px 4px;
+	border-color: transparent transparent cyan transparent;
+}
+
+/* line 124, sass/_arrow.scss */
+.arrow--dt::after {
+	top: auto;
+	width: 2px;
+	height: 20px;
+	background: cyan;
+}
+
+/* line 132, sass/_arrow.scss */
+.arrow--dr::before {
+	left: auto;
+	border-style: solid;
+	border-width: 4px 0 4px 10px;
+	border-color: transparent transparent transparent cyan;
+}
+
+/* line 138, sass/_arrow.scss */
+.arrow--dr::after {
+	right: auto;
+	width: 20px;
+	height: 2px;
+	background: cyan;
+}
+
+/* line 146, sass/_arrow.scss */
+.arrow--db::after {
+	bottom: auto;
+	width: 2px;
+	height: 20px;
+	background: cyan;
+}
+
+/* line 152, sass/_arrow.scss */
+.arrow--db::before {
+	top: auto;
+	border-style: solid;
+	border-width: 10px 4px 0 4px;
+	border-color: cyan transparent transparent transparent;
+}
+
+/* line 160, sass/_arrow.scss */
+.arrow--dl::before {
+	left: auto;
+	width: 20px;
+	height: 2px;
+	background: cyan;
+}
+
+/* line 166, sass/_arrow.scss */
+.arrow--dl::after {
+	right: auto;
+	border-style: solid;
+	border-width: 4px 10px 4px 0;
+	border-color: transparent cyan transparent transparent;
+}
+
+/* line 4, sass/master.scss */
 .grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -9,14 +212,14 @@
 	        justify-content: center;
 }
 
-/* line 13, sass/master.scss */
+/* line 15, sass/master.scss */
 html, body {
 	background-color: #ddd;
 	width: 100%;
 	height: 100%;
 }
 
-/* line 19, sass/master.scss */
+/* line 21, sass/master.scss */
 .main {
 	display: grid;
 	grid-template-rows: 2em 1fr;
@@ -25,7 +228,7 @@ html, body {
 	margin: 10px;
 }
 
-/* line 28, sass/master.scss */
+/* line 30, sass/master.scss */
 .main__column-heading {
 	grid-area: column;
 	display: -webkit-box;
@@ -40,7 +243,7 @@ html, body {
 	margin: 0 10px;
 }
 
-/* line 35, sass/master.scss */
+/* line 37, sass/master.scss */
 .main__row-heading {
 	grid-area: row;
 	display: -webkit-box;
@@ -55,7 +258,7 @@ html, body {
 	margin: 10px 0;
 }
 
-/* line 42, sass/master.scss */
+/* line 44, sass/master.scss */
 .main__column-heading-text {
 	width: 100%;
 	height: 100%;
@@ -63,7 +266,7 @@ html, body {
 	padding-bottom: 5px;
 }
 
-/* line 48, sass/master.scss */
+/* line 50, sass/master.scss */
 .main__row-heading-text {
 	width: 100%;
 	height: 100%;
@@ -74,142 +277,52 @@ html, body {
 	        writing-mode: vertical-lr;
 }
 
-/* line 55, sass/master.scss */
+/* line 57, sass/master.scss */
 .main__content {
 	grid-area: content;
 }
 
-/* line 60, sass/master.scss */
-.arrow--l,
-.arrow--r,
-.arrow--lr {
-	display: inline-block;
-	position: relative;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	border-bottom: 2px solid #000;
-	line-height: 1em;
-}
-
-/* line 72, sass/master.scss */
-.arrow--t,
-.arrow--b,
-.arrow--tb {
-	display: inline-block;
-	position: relative;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	border-left: 2px solid #000;
-	line-height: 1em;
-}
-
-/* line 84, sass/master.scss */
-.arrow--l {
-	padding-left: 2em;
-	padding-right: 0.5em;
-}
-
-/* line 89, sass/master.scss */
-.arrow--r {
-	padding-left: 0.5em;
-	padding-right: 2em;
-}
-
-/* line 94, sass/master.scss */
-.arrow--lr {
-	padding-left: 2em;
-	padding-right: 2em;
-}
-
-/* line 99, sass/master.scss */
-.arrow--l::before,
-.arrow--lr::before {
-	position: absolute;
-	left: -2px;
-	bottom: -2px;
-	border-left: 1.5em solid transparent;
-	border-bottom: 0.7em solid #000;
-	content: "";
-}
-
-/* line 108, sass/master.scss */
-.arrow--r::after,
-.arrow--lr::after {
-	position: absolute;
-	right: -2px;
-	bottom: -2px;
-	border-right: 1.5em solid transparent;
-	border-bottom: 0.7em solid #000;
-	content: "";
-}
-
-/* line 118, sass/master.scss */
-.arrow--b {
-	padding-bottom: 2em;
-	padding-top: 0.5em;
-}
-
-/* line 123, sass/master.scss */
-.arrow--t {
-	padding-bottom: 0.5em;
-	padding-top: 2em;
-}
-
-/* line 128, sass/master.scss */
-.arrow--tb {
-	padding-bottom: 2em;
-	padding-top: 2em;
-}
-
-/* line 133, sass/master.scss */
-.arrow--b::before,
-.arrow--tb::before {
-	position: absolute;
-	bottom: -2px;
-	left: -2px;
-	border-bottom: 1.5em solid transparent;
-	border-left: 0.7em solid #000;
-	content: "";
-}
-
-/* line 142, sass/master.scss */
-.arrow--t::after,
-.arrow--tb::after {
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	border-top: 1.5em solid transparent;
-	border-left: 0.7em solid #000;
-	content: "";
-}
-
-/* line 152, sass/master.scss */
+/* line 62, sass/master.scss */
 .grid {
 	background-color: #fff;
 	margin: 10px;
 	border: 2px solid #999;
-	padding: 20px;
-	gap: 4px;
 }
 
-/* line 159, sass/master.scss */
+/* line 67, sass/master.scss */
 .grid__item {
+	display: grid;
+	grid-template-columns: 30px 1fr 30px;
+	grid-template-rows: 30px 1fr 30px;
+	grid-template-areas: ". t    ." "l main r" ". b    .";
+	position: relative;
+}
+
+/* line 77, sass/master.scss */
+.item__main {
+	grid-area: main;
 	background-color: #d18a6380;
 	border: 2px solid #d18a6380;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	padding: 20px;
 	color: #333;
 	font-weight: bold;
+}
+
+/* line 85, sass/master.scss */
+.item__arrow.arrow--dt {
+	grid-area: t;
+}
+
+/* line 86, sass/master.scss */
+.item__arrow.arrow--dr {
+	grid-area: r;
+}
+
+/* line 87, sass/master.scss */
+.item__arrow.arrow--db {
+	grid-area: b;
+}
+
+/* line 88, sass/master.scss */
+.item__arrow.arrow--dl {
+	grid-area: l;
 }

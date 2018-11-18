@@ -1,3 +1,5 @@
+@import "_arrow";
+
 // grid
 .grid{
   display: grid;
@@ -56,113 +58,32 @@ html,body{
   grid-area: content;
 }
 
-// arrow
-.arrow--l,
-.arrow--r,
-.arrow--lr{
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border-bottom: 2px solid #000;
-  line-height: 1em;
-}
-
-.arrow--t,
-.arrow--b,
-.arrow--tb{
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border-left: 2px solid #000;
-  line-height: 1em;
-}
-
-.arrow--l{
-  padding-left: 2em;
-  padding-right: 0.5em;
-}
-
-.arrow--r{
-  padding-left: 0.5em;
-  padding-right: 2em;
-}
-
-.arrow--lr{
-  padding-left: 2em;
-  padding-right: 2em;
-}
-
-.arrow--l::before,
-.arrow--lr::before{
-  position: absolute;
-  left: -2px;
-  bottom: -2px;
-  border-left: 1.5em solid transparent;
-  border-bottom: 0.7em solid #000;
-  content: "";
-}
-.arrow--r::after,
-.arrow--lr::after{
-  position: absolute;
-  right: -2px;
-  bottom: -2px;
-  border-right: 1.5em solid transparent;
-  border-bottom: 0.7em solid #000;
-  content: "";
-}
-
-.arrow--b{
-  padding-bottom: 2em;
-  padding-top: 0.5em;
-}
-
-.arrow--t{
-  padding-bottom: 0.5em;
-  padding-top: 2em;
-}
-
-.arrow--tb{
-  padding-bottom: 2em;
-  padding-top: 2em;
-}
-
-.arrow--b::before,
-.arrow--tb::before{
-  position: absolute;
-  bottom: -2px;
-  left: -2px;
-  border-bottom: 1.5em solid transparent;
-  border-left: 0.7em solid #000;
-  content: "";
-}
-.arrow--t::after,
-.arrow--tb::after{
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  border-top: 1.5em solid transparent;
-  border-left: 0.7em solid #000;
-  content: "";
-}
 
 .grid{
   background-color: #fff;
   margin: 10px;
   border: 2px solid #999;
-  padding: 20px;
-  gap: 4px;
 }
 .grid__item{
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  grid-template-rows: 30px 1fr 30px;
+  grid-template-areas:
+    ". t    ."
+    "l main r"
+    ". b    .";
+  position: relative;
+}
+.item__main{
+  grid-area: main;
   background-color: #d18a6380;
   border: 2px solid #d18a6380;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
   color: #333;
   font-weight: bold;
+}
+.item__arrow{
+  &.arrow--dt{grid-area:t;}
+  &.arrow--dr{grid-area:r;}
+  &.arrow--db{grid-area:b;}
+  &.arrow--dl{grid-area:l;}
 }
